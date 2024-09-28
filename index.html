@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #grid-container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 25px;
+            margin: 10%;
+        }
+        .grid-box{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            padding: 100px;
+            border-radius: 10px;
+        }
+        #grid-container div:nth-child(1){
+            background-color: rgb(42, 42, 252);
+        }
+        #grid-container div:nth-child(2){
+            background-color: rgb(54, 245, 36);
+        }
+        #grid-container div:nth-child(3){
+            background-color: rgb(12, 211, 194);
+        }
+        #grid-container div:nth-child(4){
+            background-color: rgb(255, 52, 52);
+        }
+        #grid-container div:nth-child(5){
+            background-color: rgb(255, 251, 24);
+        }
+        #grid-container div:nth-child(6){
+            background-color: rgb(255, 92, 43);
+        }
+        #grid-container div:nth-child(7){
+            background-color: rgb(55, 55, 68);
+        }
+        #grid-container div:nth-child(8){
+            background-color: rgb(52, 18, 97);
+        }
+        #grid-container:hover .grid-box:not(:hover){
+            opacity: 0.7;
+        }
+        @media screen and (max-width:1024px){
+            #grid-container{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+            }
+            #grid-container div{
+                padding: 70px;
+            }
+        }
+        @media screen and (max-width:767px){
+            #grid-container{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+            }
+            #grid-container div{
+                padding: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="grid-container">
+        <div class="grid-box"></div>
+        <div class="grid-box"></div>
+        <div class="grid-box"></div>
+        <div class="grid-box"></div>
+        <div class="grid-box"></div>
+        <div class="grid-box"></div>
+        <div class="grid-box"></div>
+        <div class="grid-box"></div>
+    </section>
+</body>
+</html>
